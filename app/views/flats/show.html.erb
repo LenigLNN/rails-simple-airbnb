@@ -1,0 +1,60 @@
+<div class="pic-container"></div>
+
+<div class="container mt-n5">
+  <div class="row">
+    <div class="col-8">
+      <div class="card p-3 rounded">
+        <h1><%= @flat.name %></h1>
+        <p class="flat-show-address"><%= @flat.address %></p>
+      </div>
+      <div class="card p-3 mt-3 h-100 rounded">
+        <h3>A bit more about this flat...</h3>
+        <p><%= @flat.description %></p>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="card p-3 rounded">
+        <h5>Book this place!</h5>
+
+        <form action="">
+          <div class="form-inline">
+            <div class="form-group">
+              <label for="from">From:</label>
+              <input type="text" class="form-control" id="from" placeholder="04/06/2019">
+            </div>
+          </div>
+          <div class="form-inline">
+            <span class="input-group-addon" id="basic-addon1">To:</span>
+            <input type="text" class="form-control" placeholder="18/10/2017" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <input type="submit" value="Book" class="btn btn-success mt-2" style="width: 100%">
+        </form>
+      </div>
+      <div class="card p-3 rounded mt-3">
+        <h3>Details</h3>
+        <div class="flex">
+          <div class="flex">
+            <i class="fas fa-users"></i>
+            <%=  @flat.number_of_guests %>
+            <i class="fas fa-euro-sign" style="margin-left: 15px;"></i>
+            <%= @flat.price_per_night %>
+
+          </div>
+        </div>
+      </div>
+      <div class="card p-3 rounded mt-3">
+        <div class="flex-align">
+          <h6 class="no-mb">Share</h6>
+
+          <div class="flex">
+            <i class="fab fa-facebook-square fa-2x mr-2"></i>
+            <i class="fab fa-twitter-square fa-2x mr-2"></i>
+            <i class="fab fa-pinterest-square fa-2x mr-2"></i>
+            <i class="fas fa-envelope fa-2x mr-2"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

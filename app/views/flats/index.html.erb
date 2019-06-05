@@ -1,0 +1,27 @@
+
+<div class="container mt-3">
+  <h1>All our Flats(<%= @flats.count %>)</h1>
+  <p>You searched for . We found 4 flats out of our 4 on our website.</p>
+  <div class="row">
+    <% @flats.each do |flat| %>
+    <div class="card m-3" style="width: 18rem;">
+      <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200" alt="" class="card-img-top">
+      <div class="card-body">
+        <h3><%= flat.name %></h3>
+        <p><%= flat.address %></p>
+        <i class="fas fa-users"></i>
+        <%=  flat.number_of_guests %>
+        <i class="fas fa-euro-sign" style="margin-left: 15px;"></i>
+        <%= flat.price_per_night %>
+        <div class="flex">
+          <div class="flat-card-actions">
+            <%= link_to "More info",  flat_path(flat), class: "text-primary" %>
+            <%= link_to "Edit",  flat_path(flat), class: "text-warning" %>
+            <%= link_to "Remove",  flat_path(flat), class: "text-danger" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
